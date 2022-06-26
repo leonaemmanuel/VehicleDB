@@ -1,0 +1,29 @@
+<h2 class="vehicle">{{viewTitle}}</h2>
+
+<form action="/vehicle" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{vehicle._id}}">
+    <div class="form-input">
+        <label>Manufacturer</label><br>
+        <input type="text" name="name" placeholder="Manufacturer" value="{{vehicle.name}}">
+    </div>
+    <div class="form-input">
+        <label>Model</label><br>
+        <input type="text" name="model" placeholder="Model" value="{{vehicle.model}}">
+    </div>
+    <div class="form-input">
+        <label>Year</label><br>
+        <input type="text" name="year" placeholder="Year" value="{{vehicle.year}}">
+    </div>
+    <div class="form-input">
+        <label>Distance</label><br>
+        <input type="text" name="kms" placeholder="Distance" value="{{vehicle.kms}}">
+    </div>
+    <div class="form-input">
+        <label>Price</label><br>
+        <input type="text" name="price" placeholder="Price" value="{{vehicle.price}}">
+    </div><br>
+    <div class="form-input">
+        <button type="submit">Submit</button>
+        <a href="/vehicle/list">View All</a>
+    </div>
+</form>

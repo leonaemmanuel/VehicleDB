@@ -1,0 +1,31 @@
+<h2 class="vehicle">Vehicle List</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Distance</th>
+            <th>Price</th>
+            <th style="background-color: transparent;">
+                <a href="/vehicle" style="margin-left: -30px;">Add New</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.model}}</td>
+            <td>{{this.year}}</td>
+            <td>{{this.kms}}</td>
+            <td>{{this.price}}</td>
+            <td style="background-color: transparent;">
+                <a href="/vehicle/{{this.id}}">Edit</a>
+                <a href="/vehicle/delete/{{this.id}}">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
